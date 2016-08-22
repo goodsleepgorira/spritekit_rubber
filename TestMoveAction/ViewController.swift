@@ -1,25 +1,29 @@
 //
 //  ViewController.swift
-//  TestMoveAction
-//
-//  Created by 齋藤緒 on 2016/08/22.
-//  Copyright © 2016年 TestOrganization. All rights reserved.
 //
 
 import UIKit
+import SpriteKit
 
 class ViewController: UIViewController {
-
+    
+    //最初からあるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //SKViewを取得する。
+        let skView = self.view as! SKView
+        
+        //SKSファイルを指定してSKSceneインスタンスを生成する。
+        let scene = TestScene(fileNamed: "TestScene")
+        
+        //現在シーンを設定する。
+        skView.presentScene(scene)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
