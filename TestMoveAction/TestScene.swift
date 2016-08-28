@@ -5,8 +5,7 @@
 import Foundation
 import SpriteKit
 
-class TestScene:SKScene, SKPhysicsContactDelegate {
-
+class TestScene:SKScene {
     var birdBrown:SKSpriteNode!
 
     //現在シーン設定時の呼び出しメソッド
@@ -15,8 +14,6 @@ class TestScene:SKScene, SKPhysicsContactDelegate {
         //SKSファイルに配置した鳥ノードを取得する。
         birdBrown = self.childNodeWithName("bird_brown") as? SKSpriteNode
         
-        //デリゲート先を自分に設定する。
-        self.physicsWorld.contactDelegate = self
     }
     
     
@@ -32,11 +29,6 @@ class TestScene:SKScene, SKPhysicsContactDelegate {
             node.physicsBody?.affectedByGravity = true
         }
         
-    }
-    
-    //衝突時の呼び出しメソッド
-    func didBeginContact(contact: SKPhysicsContact) {
-        print("衝突しました")
     }
     
 }
