@@ -9,6 +9,8 @@ class TestScene:SKScene {
 
     var birdBrown:SKSpriteNode!
     var birdRed:SKSpriteNode!
+    var birdBlue:SKSpriteNode!
+
 
     //現在シーン設定時の呼び出しメソッド
     override func didMoveToView(view: SKView) {
@@ -16,6 +18,7 @@ class TestScene:SKScene {
         //SKSファイルに配置した鳥ノードを取得する。
         birdBrown = self.childNodeWithName("bird_brown") as? SKSpriteNode
         birdRed = self.childNodeWithName("bird_red") as? SKSpriteNode
+        birdBlue = self.childNodeWithName("bird_blue") as? SKSpriteNode
         
         //シーンを画面サイズに合わせる。
         self.scaleMode = .AspectFit
@@ -28,15 +31,11 @@ class TestScene:SKScene {
     
     //画面タッチ時の呼び出しメソッド
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-        //タッチした座標のノードを取得する。
-        let location = touches.first!.locationInNode(self)
 
-        if let node = nodeAtPoint(location) as? SKSpriteNode {
-            //鳥ノードの場合、物理ボディを設定する。
-            if(node == birdBrown || node == birdRed){
-                node.physicsBody?.affectedByGravity = true
-            }
-        }
+        //フィールドビットマスクを線形重力フィールドと同じにする。
+        birdBrown.physicsBody?.fieldBitMask = 0b0001
+        birdRed.physicsBody?.fieldBitMask = 0b0001
+        birdBlue.physicsBody?.fieldBitMask = 0b0001
+        
     }    
 }
