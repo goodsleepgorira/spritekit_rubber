@@ -31,11 +31,6 @@ class TestScene:SKScene {
     
     //画面タッチ時の呼び出しメソッド
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
-        //フィールドビットマスクを線形重力フィールドと同じにする。
-        birdBrown.physicsBody?.fieldBitMask = 0b0001
-        birdRed.physicsBody?.fieldBitMask = 0b0001
-        birdBlue.physicsBody?.fieldBitMask = 0b0001
-        
+        print("画面をタップしました")
     }    
 }
