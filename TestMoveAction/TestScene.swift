@@ -7,7 +7,6 @@ import SpriteKit
 
 class TestScene:SKScene {
 
-
     //現在シーン設定時の呼び出しメソッド
     override func didMoveToView(view: SKView) {
         

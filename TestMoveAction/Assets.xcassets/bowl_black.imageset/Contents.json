@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "rocket_blue.png",
+      "filename" : "bowl_black.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "rocket_blue@2x.png",
+      "filename" : "bowl_black@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "rocket_blue@3x.png",
+      "filename" : "bowl_black@3x.png",
       "scale" : "3x"
     }
   ],
