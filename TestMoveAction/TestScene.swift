@@ -7,18 +7,9 @@ import SpriteKit
 
 class TestScene:SKScene {
 
-    var rocketBrown:SKSpriteNode!
-    var rocketRed:SKSpriteNode!
-    var rocketBlue:SKSpriteNode!
-
 
     //現在シーン設定時の呼び出しメソッド
     override func didMoveToView(view: SKView) {
-        
-        //SKSファイルに配置した宇宙船ノードを取得する。
-        rocketBrown = self.childNodeWithName("rocket_brown") as? SKSpriteNode
-        rocketRed = self.childNodeWithName("rocket_red") as? SKSpriteNode
-        rocketBlue = self.childNodeWithName("rocket_blue") as? SKSpriteNode
         
         //シーンを画面サイズに合わせる。
         self.scaleMode = .AspectFit
