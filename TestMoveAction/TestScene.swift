@@ -13,8 +13,6 @@ class TestScene:SKScene {
         //シーンを画面サイズに合わせる。
         self.scaleMode = .AspectFit
         
-        //画面端に物理ボディを設定する。
-        self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
     }
     
     
